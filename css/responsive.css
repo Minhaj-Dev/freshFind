@@ -1,0 +1,108 @@
+/* =========================================================
+   FRESHFIND - GLOBAL RESPONSIVE STYLES
+   Desktop, Tablet, and Mobile Adaptations
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .featured-slide-card {
+    grid-template-columns: 1fr;
+  }
+  .slide-image-col {
+    min-height: 240px;
+  }
+  .slide-content-col {
+    padding: 28px 32px;
+  }
+  .quick-find-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .market-details-card {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .nav-links {
+    display: none;
+  }
+  .mobile-hamburger {
+    display: block;
+  }
+  .main-header {
+    padding: 12px 20px;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px;
+  }
+  .hero-visual {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .quick-find-box {
+    padding: 24px 20px;
+  }
+  .quick-find-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .market-filter-area {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bookmark-item-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bookmark-card-actions {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 580px) {
+  .top-bar-inner {
+    justify-content: center;
+    text-align: center;
+    font-size: 11px;
+  }
+  .top-bar-clock {
+    display: block;
+    width: 100%;
+  }
+  .brand-text small {
+    display: none;
+  }
+  .header-right .nav-auth-btn {
+    display: none;
+  }
+  .hero-content h1 {
+    font-size: 34px !important;
+  }
+  .market-filter-area {
+    grid-template-columns: 1fr;
+  }
+  .chatbot-window {
+    width: calc(100vw - 20px);
+    right: 10px;
+    bottom: 80px;
+    height: 480px;
+  }
+  .chatbot-launcher {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px 18px;
+  }
+  .home-cta-box {
+    padding: 40px 20px;
+  }
+  .home-cta-box h2 {
+    font-size: 28px;
+  }
+  .slide-timing-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-box {
+    padding: 24px 18px;
+  }
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Market Directory | FreshFind — Fresh All Along</title>
+  <meta
+    name="description"
+    content="Browse the complete Farmers Market Directory on FreshFind. Check operating days, hours, live open/closed status, and discover nearby markets."
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <!-- =========================
+       TOP BAR & LIVE CLOCK
+  ========================== -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span class="top-bar-brand-tag">FreshFind — Fresh All Along</span>
+      <span id="liveClock" class="top-bar-clock">Current Time: Loading...</span>
+    </div>
+  </div>
+
+  <!-- =========================
+       GLOBAL NAVIGATION
+  ========================== -->
+  <header class="main-header">
+    <a href="index.html" class="brand">
+      <div class="brand-mark"><span>F</span></div>
+      <div class="brand-text">
+        <strong>FreshFind</strong>
+        <small>Fresh All Along</small>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#quick-find">Find a Market</a></li>
+      <li><a href="markets.html" class="active">Market Directory</a></li>
+      <li><a href="produce.html">Produce Guide</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li>
+        <a href="bookmarks.html">
+          Bookmarks <span id="bookmarkCount" class="badge">0</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="header-right">
+      <button class="nav-auth-btn open-login-btn">Login</button>
+      <button class="nav-auth-btn nav-signup-btn open-signup-btn">Signup</button>
+      <a href="markets.html" class="btn-find">Directory</a>
+      <button class="mobile-hamburger" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-header">
+      <div class="brand">
+        <div class="brand-mark"><span>F</span></div>
+        <div class="brand-text"><strong>FreshFind</strong></div>
+      </div>
+      <button class="modal-close" id="closeMobileNav" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#quick-find">Find a Market</a></li>
+      <li><a href="markets.html">Market Directory</a></li>
+      <li><a href="produce.html">Produce Guide</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="bookmarks.html">Bookmarks <span class="badge bookmark-count-badge">0</span></a></li>
+      <li><button class="open-login-btn">Login</button></li>
+      <li><button class="open-signup-btn">Signup</button></li>
+    </ul>
+  </div>
+
+  <!-- Breadcrumb -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <strong>Market Directory</strong>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO HEADER -->
+    <section class="markets-hero" style="background: #eef3eb; padding: 48px 0; border-bottom: 1px solid #dce8da;">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px;">
+          <div>
+            <span class="section-kicker">LOCAL FARMERS MARKETS</span>
+            <h1 style="font-size: 42px; color: #173d2b; font-weight: 800; margin: 8px 0 12px;">Farmers Market Directory</h1>
+            <p style="color: #556b5d; font-size: 16px; max-width: 600px; margin: 0;">
+              Browse all community markets, check live operating hours and days, and find local fresh harvests near you.
+            </p>
+          </div>
+          <div style="background: #ffffff; padding: 16px 24px; border-radius: 16px; border: 1px solid #d3e2d0; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+            <strong id="marketResultCount" style="font-size: 36px; color: #173d2b; font-family: monospace; display: block; line-height: 1;">12</strong>
+            <small style="font-size: 12px; color: #6a8c6f; font-weight: 700; text-transform: uppercase;">Markets Listed</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECTORY CONTROLS & GRID -->
+    <section style="padding: 40px 0 70px;">
+      <div class="container">
+        <!-- SEARCH BOX -->
+        <div class="market-search-box">
+          <input
+            type="text"
+            id="marketSearch"
+            placeholder="Search market name, area, neighborhood, produce or description..."
+            autocomplete="off"
+            aria-label="Search markets"
+          />
+          <button type="button" id="marketSearchBtn" class="primary-btn" style="border-radius: 12px;">
+            Search <span>⌕</span>
+          </button>
+        </div>
+
+        <!-- FILTERS & GEOLOCATION BAR -->
+        <div class="market-filter-area">
+          <div class="filter-item">
+            <label for="areaFilter">Area</label>
+            <select id="areaFilter">
+              <option value="all">All Areas</option>
+              <option value="Downtown">Downtown</option>
+              <option value="Clifton">Clifton</option>
+              <option value="Gulshan">Gulshan</option>
+              <option value="North District">North District</option>
+              <option value="South District">South District</option>
+              <option value="Riverside">Riverside</option>
+            </select>
+          </div>
+
+          <div class="filter-item">
+            <label for="dayFilter">Market Day</label>
+            <select id="dayFilter">
+              <option value="all">All Days</option>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+          </div>
+
+          <div class="filter-item">
+            <label for="produceFilter">Produce Available</label>
+            <select id="produceFilter">
+              <option value="all">All Produce</option>
+            </select>
+          </div>
+
+          <div class="filter-item">
+            <label for="sortMarkets">Sort By</label>
+            <select id="sortMarkets">
+              <option value="default">Default</option>
+              <option value="az">A–Z (Name)</option>
+              <option value="za">Z–A (Name)</option>
+              <option value="nearest">Nearest First</option>
+              <option value="next_open">Next Open / Status</option>
+            </select>
+          </div>
+
+          <div class="location-btn-item">
+            <button type="button" class="location-btn" id="useLocationBtn">
+              <span>📍</span> Use My Location
+            </button>
+          </div>
+
+          <div style="display: flex; align-items: flex-end;">
+            <button type="button" class="btn-clear-filters" id="clearFiltersBtn">
+              Clear All
+            </button>
+          </div>
+        </div>
+
+        <!-- Location Status Message -->
+        <div id="locationStatusText" style="font-size: 13px; color: #5e7867; margin-bottom: 20px; font-weight: 600;"></div>
+
+        <!-- Result Count Headline -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+          <span id="marketResultLabel" style="font-size: 14px; font-weight: 700; color: #3b5a45;">
+            Showing 12 of 12 Farmers Markets
+          </span>
+        </div>
+
+        <!-- MARKET CARDS DIRECTORY -->
+        <div class="market-directory-grid" id="marketDirectory">
+          <!-- Dynamically populated via js/markets.js -->
+        </div>
+
+        <!-- NO RESULTS STATE (SECTION 15) -->
+        <div id="noMarketsFound" style="display: none; text-align: center; padding: 60px 20px; background: #ffffff; border: 1px dashed #cfd9cb; border-radius: 16px; margin-top: 30px;">
+          <div style="font-size: 48px; margin-bottom: 12px;">🧺</div>
+          <h3 style="font-size: 22px; color: #173d2b; font-weight: 800; margin-bottom: 6px;">No Markets Found</h3>
+          <p style="color: #6a7c6f; font-size: 14px; margin-bottom: 20px;">No farmers markets match your currently selected search and filter criteria.</p>
+          <button type="button" class="primary-btn" onclick="document.getElementById('clearFiltersBtn').click()">
+            Clear All Filters
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="brand footer-logo">
+          <div class="brand-mark"><span>F</span></div>
+          <div class="brand-text">
+            <strong>FreshFind</strong>
+            <small>Fresh All Along</small>
+          </div>
+        </a>
+        <p>Helping communities discover local farmers markets and seasonal fresh produce.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="https://wa.me/" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#quick-find">Find Market</a>
+        <a href="markets.html">Market Directory</a>
+        <a href="produce.html">Produce Guide</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="produce.html">Seasonal Picks</a>
+        <a href="guide.html">User Guide</a>
+        <a href="#" class="open-login-btn">Account Login</a>
+      </div>
+
+      <div class="footer-column footer-note">
+        <h4>Project Info</h4>
+        <p>Frontend-only web application created for discovering local markets and produce.</p>
+        <small style="color: #8fa094;">No server or API key required.</small>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 FreshFind. Fresh All Along.</p>
+      <p>Built with care for local communities.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/engine.js"></script>
+  <script src="js/bookmarks.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/markets.js"></script>
+</body>
+</html>

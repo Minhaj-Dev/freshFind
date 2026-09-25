@@ -1,0 +1,101 @@
+{
+  "intents": [
+    {
+      "id": "find_market",
+      "keywords": ["find a market", "find market", "search market", "nearby market", "where is market", "market near me", "locate market", "directory"],
+      "response": "You can explore all local farmers markets right here! Use our Market Directory to filter by Area (Downtown, Clifton, Gulshan, etc.), Day, or specific Produce.",
+      "links": [
+        { "label": "Explore Market Directory", "url": "markets.html" },
+        { "label": "Search on Home Page", "url": "index.html#quick-find" }
+      ]
+    },
+    {
+      "id": "open_today",
+      "keywords": ["markets open today", "open today", "open now", "what is open today", "today markets", "opening today"],
+      "dynamicType": "open_today",
+      "response": "Here are the markets operating today based on our live schedule:",
+      "links": [
+        { "label": "View Market Directory", "url": "markets.html" }
+      ]
+    },
+    {
+      "id": "seasonal_produce",
+      "keywords": ["what produce is in season", "in season", "seasonal produce", "seasons", "current season", "season picks", "what is in season"],
+      "dynamicType": "seasonal",
+      "response": "Fresh seasonal produce changes with the weather! Check out our seasonal recommendations in the Produce Guide:",
+      "links": [
+        { "label": "Open Produce Guide", "url": "produce.html" }
+      ]
+    },
+    {
+      "id": "find_tomatoes",
+      "keywords": ["where can i find tomatoes", "tomatoes", "tomato", "find tomatoes", "buy tomatoes"],
+      "response": "Fresh vine-ripened tomatoes are typically available at Greenfield Fresh Market, Riverside Farmers Market, Fresh Corner Market, and Green Basket Market.",
+      "links": [
+        { "label": "Greenfield Fresh Market", "url": "market-details.html?id=1" },
+        { "label": "Riverside Farmers Market", "url": "market-details.html?id=3" },
+        { "label": "Fresh Corner Market", "url": "market-details.html?id=7" },
+        { "label": "Green Basket Market", "url": "market-details.html?id=9" }
+      ]
+    },
+    {
+      "id": "find_mangoes",
+      "keywords": ["mangoes", "mango", "where can i find mangoes", "buy mangoes"],
+      "response": "Sweet golden mangoes are available at Garden Harvest Market, Central Green Basket, Harvest Lane Market, and Riverside Harvest Hub.",
+      "links": [
+        { "label": "Garden Harvest Market", "url": "market-details.html?id=2" },
+        { "label": "Central Green Basket", "url": "market-details.html?id=4" },
+        { "label": "Harvest Lane Market", "url": "market-details.html?id=6" }
+      ]
+    },
+    {
+      "id": "saturday_markets",
+      "keywords": ["show saturday markets", "saturday markets", "saturday", "weekend markets", "markets on saturday"],
+      "response": "The following markets operate every Saturday: Greenfield Fresh Market (Downtown), Garden Harvest Market (Clifton), Central Green Basket (Gulshan), Harvest Lane Market (South District), Riverside Harvest Hub (Riverside), and Orchard Lane Market (South District).",
+      "links": [
+        { "label": "Filter Saturday Markets", "url": "markets.html?day=Saturday" }
+      ]
+    },
+    {
+      "id": "how_it_works",
+      "keywords": ["how does freshfind work", "how it works", "what is freshfind", "about freshfind", "help", "guide"],
+      "response": "FreshFind is simple: 1. Discover nearby farmers markets. 2. Explore operating hours, addresses, and available produce. 3. Bookmark your favorite spots with session notes. 4. Visit and enjoy fresh food closer to home!",
+      "links": [
+        { "label": "Read About Us", "url": "about.html" },
+        { "label": "View FreshFind Guide", "url": "guide.html" }
+      ]
+    },
+    {
+      "id": "bookmarks",
+      "keywords": ["bookmark", "bookmarks", "saved", "favorites", "save market", "export bookmarks"],
+      "response": "You can save any market or produce item by tapping the heart icon (♡). Access your saved list anytime and even add session notes or export them to a file!",
+      "links": [
+        { "label": "Go to Bookmarks", "url": "bookmarks.html" }
+      ]
+    },
+    {
+      "id": "hours",
+      "keywords": ["hours", "timings", "timing", "schedule", "when open", "opening hours"],
+      "response": "Most markets operate morning to mid-afternoon (e.g., 08:00 AM – 02:00 PM). Each market's complete 7-day schedule is listed on its detail page with live open/closed status.",
+      "links": [
+        { "label": "Browse All Market Hours", "url": "markets.html" }
+      ]
+    },
+    {
+      "id": "contact",
+      "keywords": ["contact", "support", "email", "phone", "reach out", "feedback", "address"],
+      "response": "Our team is here to help! You can reach FreshFind through our Contact Us page or find our physical community hub coordinates on the map.",
+      "links": [
+        { "label": "Contact Us", "url": "contact.html" }
+      ]
+    }
+  ],
+  "fallback": {
+    "response": "I'm sorry, I couldn't find an exact answer. Try asking about markets, opening hours, produce, seasons, or locations.",
+    "links": [
+      { "label": "Market Directory", "url": "markets.html" },
+      { "label": "Produce Guide", "url": "produce.html" },
+      { "label": "About FreshFind", "url": "about.html" }
+    ]
+  }
+}

@@ -1,0 +1,609 @@
+/* =========================================
+   FRESHFIND - MARKETS PAGE & HEADER CSS
+========================================= */
+
+
+
+/* =========================================
+   HERO SECTION (Fixing Overlap)
+========================================= */
+
+.markets-hero {
+    position: relative;
+    background: #e8eadf;
+    border-bottom: 1px solid #dfe3d6;
+    padding: 60px 0;
+    margin-top: 0; /* Ensures proper spacing below header */
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 25px;
+    color: #68746a;
+    font-size: 12px;
+}
+
+.breadcrumb a {
+    color: #45634d;
+    text-decoration: none;
+}
+
+.markets-hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.section-kicker {
+    display: block;
+    margin-bottom: 10px;
+    color: #78955e;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.markets-hero h1 {
+    margin: 0 0 15px;
+    color: #173d2b;
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+}
+
+.markets-hero h1 span {
+    color: #7a9b55;
+}
+
+.markets-hero p {
+    max-width: 600px;
+    margin: 0;
+    color: #5c695f;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.market-total {
+    text-align: right;
+}
+
+.market-total strong {
+    display: block;
+    font-size: 38px;
+    color: #173d2b;
+    line-height: 1;
+}
+
+.market-total span {
+    font-size: 12px;
+    color: #6a746c;
+}
+
+/* =========================================
+   DIRECTORY & CARDS SECTION
+========================================= */
+
+.market-directory-section {
+    padding: 60px 0;
+    background: #f7f5ef;
+}
+
+.market-search-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.market-search {
+    position: relative;
+    flex: 1;
+}
+
+.market-search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #758177;
+    font-size: 18px;
+}
+
+.market-search input {
+    width: 100%;
+    height: 50px;
+    padding: 0 20px 0 48px;
+    border: 1px solid #d9ddd4;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #23392c;
+    font-size: 14px;
+    outline: none;
+}
+
+.market-search-btn {
+    min-width: 120px;
+    border: 0;
+    border-radius: 5px;
+    background: #173d2b;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.market-filter-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+    gap: 12px;
+    align-items: end;
+    padding: 20px;
+    margin-bottom: 40px;
+    border: 1px solid #e1e2da;
+    border-radius: 7px;
+    background: #eeece4;
+}
+
+.filter-item label {
+    display: block;
+    margin-bottom: 6px;
+    color: #526157;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.filter-item select {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #d5d9d0;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #34463a;
+    font-size: 12px;
+    outline: none;
+}
+
+.clear-filter-btn {
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #bbc6b8;
+    border-radius: 4px;
+    background: transparent;
+    color: #45604d;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.directory-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.directory-heading h2 {
+    margin: 0;
+    color: #173d2b;
+    font-size: 30px;
+}
+
+.directory-heading h2 span {
+    color: #78955e;
+}
+
+.directory-heading p {
+    margin: 0;
+    color: #6a746c;
+    font-size: 13px;
+}
+
+.market-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.market-card {
+    border: 1px solid #e1e2db;
+    border-radius: 8px;
+    background: #ffffff;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.market-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(32, 53, 42, 0.08);
+}
+
+.market-image {
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.market-status {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    background: #e8f1df;
+    color: #3c673d;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.market-bookmark {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #42614a;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.market-card-content {
+    padding: 20px;
+}
+
+.market-tag {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #7a9b55;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.market-card h3 {
+    margin: 0 0 6px;
+    color: #203a2a;
+    font-size: 18px;
+}
+
+.market-location {
+    margin: 0 0 10px;
+    color: #5e7064;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.market-description {
+    margin: 0 0 15px;
+    color: #717b73;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.market-meta {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    margin-bottom: 15px;
+    border-top: 1px solid #edf0ea;
+    color: #536259;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.market-details-link {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #f7f9f4;
+    border: 1px solid #b9c8b5;
+    border-radius: 4px;
+    color: #294a35;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.market-details-link:hover {
+    background: #173d2b;
+    color: #ffffff;
+    border-color: #173d2b;
+}
+
+/* CTA SECTION */
+.markets-cta {
+    padding: 60px 40px;
+    background: #173d2b;
+    color: #ffffff;
+}
+
+.markets-cta-box {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.markets-cta h2 {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+
+.markets-cta h2 span {
+    color: #a8c181;
+}
+
+.markets-cta p {
+    margin: 0;
+    color: #c8d2c9;
+    font-size: 13px;
+}
+
+.primary-btn {
+    background: #f2eee4;
+    color: #173d2b;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1050px) {
+    .market-directory-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .market-filter-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 760px) {
+    .market-directory-grid {
+        grid-template-columns: 1fr;
+    }
+    .market-filter-area {
+        grid-template-columns: 1fr;
+    }
+    .markets-cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+/* =========================================
+   FOOTER CSS
+========================================= */
+
+.main-footer {
+    background: #102c20;
+    color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 55px 40px 45px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 50px;
+}
+
+.footer-brand a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.footer-brand a span {
+    color: #a8c181;
+}
+
+.footer-brand p {
+    max-width: 280px;
+    margin: 15px 0 0;
+    color: #9dac9f;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.footer-column h4 {
+    margin: 0 0 7px;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.footer-column a {
+    color: #9dac9f;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.footer-note span {
+    display: block;
+    margin-bottom: 8px;
+    color: #a8c181;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.footer-note p {
+    margin: 0;
+    color: #9dac9f;
+    font-size: 12px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 17px 40px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #7f9185;
+    font-size: 10px;
+}
+
+/* Responsive Footer */
+@media (max-width: 1050px) {
+    .footer-container {
+        padding-left: 25px;
+        padding-right: 25px;
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+    .footer-note {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    .footer-container {
+        padding: 45px 20px;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    .footer-bottom {
+        padding: 15px 20px;
+    }
+}
+/* Har card ki apni background image set karne ke liye */
+.market-image-one {
+    background-image: url('images/market1.jpg'); /* Apni image ka path dein */
+    background-size: cover;
+    background-position: center;
+}
+
+.market-image-two {
+    background-image: url('images/market2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.market-image-three {
+    background-image: url('images/market3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Aur agar baaki cards ke liye classes nahi hain, toh common market-image ko theek karein: */
+.market-image {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+/* 5th Card Image */
+.market-image-five {
+    background-image: url('images/market5.jpg'); /* Apni 5th image ka naam/path dein */
+    background-size: cover;
+    background-position: center;
+}
+
+/* 6th Card Image */
+.market-image-six {
+    background-image: url('images/market6.jpg'); /* Apni 6th image ka naam/path dein */
+    background-size: cover;
+    background-position: center;
+}
+/* No Markets Found Box Styling */
+.no-markets-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    grid-column: 1 / -1; /* Agar grid ke andar hai toh sabhi columns par phail jaye ga */
+}
+
+.no-markets-box {
+    background: #ffffff;
+    border: 1px dashed #c2c2c2;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.no-markets-box h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1b3b2b;
+    margin-bottom: 10px;
+}
+
+.no-markets-box p {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-clear-filters {
+    background-color: #ffffff;
+    color: #1b3b2b;
+    border: 1px solid #1b3b2b;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-clear-filters:hover {
+    background-color: #1b3b2b;
+    color: #ffffff;
+}
+
+.market-timing-note {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #777777;
+    border-top: 1px solid #eaeaea;
+    padding-top: 15px;
+}
+
+.market-timing-note .note-icon {
+    color: #2d6a4f;
+    font-size: 14px;
+}
+/* Header ko fixed/sticky banane ke liye */
+header, .navbar, .site-header { /* Apne header ki class ya tag ka naam yahan likhein */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Taake header dusre elements ke upar rahe */
+    background-color: #ffffff; /* Page scroll hone par text peeche se na dikhe isliye background zaroori hai */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Thora sa shadow taake alag se nazar aaye */
+}

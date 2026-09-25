@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Market Details | FreshFind</title>
+  <meta
+    name="description"
+    content="View complete operating days, weekly hours schedule, interactive map location and fresh produce available at this local farmers market."
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <!-- =========================
+       TOP BAR & LIVE CLOCK
+  ========================== -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span class="top-bar-brand-tag">FreshFind — Fresh All Along</span>
+      <span id="liveClock" class="top-bar-clock">Current Time: Loading...</span>
+    </div>
+  </div>
+
+  <!-- =========================
+       GLOBAL NAVIGATION
+  ========================== -->
+  <header class="main-header">
+    <a href="index.html" class="brand">
+      <div class="brand-mark"><span>F</span></div>
+      <div class="brand-text">
+        <strong>FreshFind</strong>
+        <small>Fresh All Along</small>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#quick-find">Find a Market</a></li>
+      <li><a href="markets.html" class="active">Market Directory</a></li>
+      <li><a href="produce.html">Produce Guide</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li>
+        <a href="bookmarks.html">
+          Bookmarks <span id="bookmarkCount" class="badge">0</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="header-right">
+      <button class="nav-auth-btn open-login-btn">Login</button>
+      <button class="nav-auth-btn nav-signup-btn open-signup-btn">Signup</button>
+      <a href="markets.html" class="btn-find">Directory</a>
+      <button class="mobile-hamburger" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-header">
+      <div class="brand">
+        <div class="brand-mark"><span>F</span></div>
+        <div class="brand-text"><strong>FreshFind</strong></div>
+      </div>
+      <button class="modal-close" id="closeMobileNav" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#quick-find">Find a Market</a></li>
+      <li><a href="markets.html">Market Directory</a></li>
+      <li><a href="produce.html">Produce Guide</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="bookmarks.html">Bookmarks <span class="badge bookmark-count-badge">0</span></a></li>
+      <li><button class="open-login-btn">Login</button></li>
+      <li><button class="open-signup-btn">Signup</button></li>
+    </ul>
+  </div>
+
+  <!-- Breadcrumb (Section 18) -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="markets.html">Market Directory</a>
+      <span class="sep">›</span>
+      <strong id="breadcrumbMarketName">Market Details</strong>
+    </div>
+  </nav>
+
+  <main>
+    <section class="market-details-page" style="padding: 40px 0 70px;">
+      <div class="container">
+        <a href="markets.html" style="display: inline-flex; align-items: center; gap: 6px; color: #2d6547; font-weight: 700; text-decoration: none; margin-bottom: 24px; font-size: 14px;">
+          ← Back to Market Directory
+        </a>
+
+        <!-- 18.1 MARKET HEADER CARD -->
+        <div class="market-details-card" style="background: #ffffff; border: 1px solid #e2ddd0; border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; box-shadow: 0 10px 30px rgba(0,0,0,0.04); margin-bottom: 40px;">
+          <!-- Large Image -->
+          <div class="market-details-image" id="marketImage" style="min-height: 380px; background-size: cover; background-position: center; position: relative; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+            <img id="marketImgTag" src="" alt="Market image" style="display: none;" />
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%;">
+              <span class="status-badge" id="marketBadge">CHECKING STATUS...</span>
+            </div>
+            <div id="marketNextOpenText" style="display: none; background: rgba(0,0,0,0.7); color: #fff; padding: 6px 12px; border-radius: 8px; font-size: 12px; backdrop-filter: blur(4px); align-self: flex-start;"></div>
+          </div>
+
+          <!-- Header Content -->
+          <div class="market-details-content" style="padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+            <span class="market-area" id="marketArea" style="font-size: 12px; font-weight: 800; color: #6a8c6f; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Area</span>
+            <h1 id="marketName" style="font-size: 34px; color: #173d2b; font-weight: 800; margin: 0 0 14px; line-height: 1.2;">Market Name</h1>
+            
+            <p class="market-description" id="marketDescription" style="font-size: 15px; color: #556b5d; line-height: 1.6; margin-bottom: 20px;">
+              Market description goes here.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 14px; background: #f7faf5; border-radius: 12px; margin-bottom: 24px;">
+              <div>
+                <small style="display: block; font-size: 11px; color: #7a8c80; text-transform: uppercase;">Primary Day(s)</small>
+                <strong id="marketDay" style="font-size: 14px; color: #173d2b;">Saturday</strong>
+              </div>
+              <div>
+                <small style="display: block; font-size: 11px; color: #7a8c80; text-transform: uppercase;">Operating Hours</small>
+                <strong id="marketTime" style="font-size: 14px; color: #173d2b;">08:00 AM – 02:00 PM</strong>
+              </div>
+            </div>
+
+            <!-- Action Buttons: Bookmark & Share -->
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <button class="primary-btn-outline" id="detailBookmarkBtn" style="padding: 10px 20px;">
+                <span>♡</span> Bookmark
+              </button>
+              <button class="primary-btn-outline" id="detailShareBtn" style="padding: 10px 20px;">
+                <span>🔗</span> Share Market
+              </button>
+              <a href="#scheduleSection" class="primary-btn" style="padding: 10px 20px;">
+                View Weekly Schedule ↓
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 19. LOCATION & 20. MAP SECTION -->
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 30px; margin-bottom: 40px;" class="location-map-grid">
+          <div style="background: #ffffff; border: 1px solid #e1dcce; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; justify-content: center;">
+            <span class="section-kicker">MARKET LOCATION</span>
+            <h2 style="font-size: 24px; color: #173d2b; font-weight: 800; margin-bottom: 18px;">Address & Coordinates</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div>
+                <small style="font-size: 11px; color: #7a8c80; text-transform: uppercase; font-weight: 700;">Full Street Address</small>
+                <p id="detailFullAddress" style="font-size: 15px; font-weight: 700; color: #173d2b; margin: 2px 0 0;">124 Market Street</p>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <div>
+                  <small style="font-size: 11px; color: #7a8c80; text-transform: uppercase; font-weight: 700;">Area</small>
+                  <p id="detailArea" style="font-size: 14px; color: #2d6547; font-weight: 700; margin: 2px 0 0;">Downtown</p>
+                </div>
+                <div>
+                  <small style="font-size: 11px; color: #7a8c80; text-transform: uppercase; font-weight: 700;">Neighborhood</small>
+                  <p id="detailNeighborhood" style="font-size: 14px; color: #2d6547; font-weight: 700; margin: 2px 0 0;">Central</p>
+                </div>
+              </div>
+
+              <div>
+                <small style="font-size: 11px; color: #7a8c80; text-transform: uppercase; font-weight: 700;">Coordinates</small>
+                <p id="detailCoordinates" style="font-family: monospace; font-size: 13px; color: #4b6653; margin: 2px 0 0;">24.8607° N, 67.0011° E</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #eef2ec;">
+              <h3 style="font-size: 16px; color: #173d2b; margin-bottom: 8px;">About This Market</h3>
+              <p id="marketAbout" style="font-size: 13px; color: #556b5d; line-height: 1.6; margin: 0;"></p>
+            </div>
+          </div>
+
+          <!-- Interactive Coordinates Map -->
+          <div class="market-map-container" id="marketMap">
+            <!-- Leaflet/OSM embed generated by js/details.js -->
+          </div>
+        </div>
+
+        <!-- 21. WEEKLY SCHEDULE SECTION -->
+        <section id="scheduleSection" style="background: #ffffff; border: 1px solid #e1dcce; border-radius: 16px; padding: 32px; margin-bottom: 40px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <span class="section-kicker">7-DAY OPERATING SCHEDULE</span>
+              <h2 style="font-size: 24px; color: #173d2b; font-weight: 800; margin: 4px 0 0;">Weekly Market Timings</h2>
+              <p style="color: #687d6e; font-size: 13px; margin: 4px 0 0;">Today's schedule is highlighted automatically based on current device date and time.</p>
+            </div>
+          </div>
+
+          <div class="schedule-table-wrap">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Day of Week</th>
+                  <th>Opening Time</th>
+                  <th>Closing Time</th>
+                  <th>Operating Status</th>
+                </tr>
+              </thead>
+              <tbody id="scheduleTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 23. MARKET PRODUCE SECTION -->
+        <section style="background: #fbfaf6; border: 1px solid #e1dcce; border-radius: 16px; padding: 32px;">
+          <div style="margin-bottom: 24px;">
+            <span class="section-kicker">WHAT YOU'LL FIND HERE</span>
+            <h2 style="font-size: 24px; color: #173d2b; font-weight: 800; margin: 4px 0 6px;">Available Fresh Produce</h2>
+            <p style="color: #687d6e; font-size: 14px; margin: 0;">Explore fruits, vegetables, dairy, and herbs traditionally available at this community market.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px;" id="marketProduceGrid">
+            <!-- Dynamically populated produce cards -->
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="brand footer-logo">
+          <div class="brand-mark"><span>F</span></div>
+          <div class="brand-text">
+            <strong>FreshFind</strong>
+            <small>Fresh All Along</small>
+          </div>
+        </a>
+        <p>Helping communities discover local farmers markets and seasonal fresh produce.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="https://wa.me/" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#quick-find">Find Market</a>
+        <a href="markets.html">Market Directory</a>
+        <a href="produce.html">Produce Guide</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="produce.html">Seasonal Picks</a>
+        <a href="guide.html">User Guide</a>
+        <a href="#" class="open-login-btn">Account Login</a>
+      </div>
+
+      <div class="footer-column footer-note">
+        <h4>Project Info</h4>
+        <p>Frontend-only web application created for discovering local markets and produce.</p>
+        <small style="color: #8fa094;">No server or API key required.</small>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 FreshFind. Fresh All Along.</p>
+      <p>Built with care for local communities.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/engine.js"></script>
+  <script src="js/bookmarks.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/details.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Produce Guide | FreshFind — Fresh All Along</title>
+  <meta
+    name="description"
+    content="Explore fresh fruits, vegetables, herbs, and dairy with FreshFind's Seasonal Produce Guide. Learn harvest seasons and discover which markets carry them."
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <!-- =========================
+       TOP BAR & LIVE CLOCK
+  ========================== -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span class="top-bar-brand-tag">FreshFind — Fresh All Along</span>
+      <span id="liveClock" class="top-bar-clock">Current Time: Loading...</span>
+    </div>
+  </div>
+
+  <!-- =========================
+       GLOBAL NAVIGATION
+  ========================== -->
+  <header class="main-header">
+    <a href="index.html" class="brand">
+      <div class="brand-mark"><span>F</span></div>
+      <div class="brand-text">
+        <strong>FreshFind</strong>
+        <small>Fresh All Along</small>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#quick-find">Find a Market</a></li>
+      <li><a href="markets.html">Market Directory</a></li>
+      <li><a href="produce.html" class="active">Produce Guide</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li>
+        <a href="bookmarks.html">
+          Bookmarks <span id="bookmarkCount" class="badge">0</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="header-right">
+      <button class="nav-auth-btn open-login-btn">Login</button>
+      <button class="nav-auth-btn nav-signup-btn open-signup-btn">Signup</button>
+      <a href="markets.html" class="btn-find">Find Market</a>
+      <button class="mobile-hamburger" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-header">
+      <div class="brand">
+        <div class="brand-mark"><span>F</span></div>
+        <div class="brand-text"><strong>FreshFind</strong></div>
+      </div>
+      <button class="modal-close" id="closeMobileNav" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#quick-find">Find a Market</a></li>
+      <li><a href="markets.html">Market Directory</a></li>
+      <li><a href="produce.html">Produce Guide</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="bookmarks.html">Bookmarks <span class="badge bookmark-count-badge">0</span></a></li>
+      <li><button class="open-login-btn">Login</button></li>
+      <li><button class="open-signup-btn">Signup</button></li>
+    </ul>
+  </div>
+
+  <!-- Breadcrumb (Section 24) -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <strong>Produce Guide</strong>
+    </div>
+  </nav>
+
+  <main>
+    <!-- PRODUCE HERO -->
+    <section class="produce-hero" style="background: #eef3eb; padding: 48px 0; border-bottom: 1px solid #dce8da;">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px;">
+        <div style="max-width: 650px;">
+          <span class="section-kicker">SEASONAL PRODUCE CATALOGUE</span>
+          <h1 style="font-size: 42px; color: #173d2b; font-weight: 800; margin: 8px 0 14px;">Fresh Produce Guide</h1>
+          <p style="color: #556b5d; font-size: 16px; margin: 0; line-height: 1.6;">
+            Know what is currently in season, explore nutritional benefits, and easily identify which community farmers markets carry each item.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; padding: 20px; border-radius: 20px; border: 1px solid #d5e5cf; display: flex; align-items: center; gap: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.03);">
+          <div style="font-size: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; text-align: center;">
+            <span>🍅</span><span>🥭</span><span>🍎</span><span>🌿</span>
+          </div>
+          <div>
+            <strong style="display: block; font-size: 16px; color: #173d2b;">Farm to Table</strong>
+            <small style="color: #6a8c6f; font-weight: 700; text-transform: uppercase;">100% Local Variety</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 29. DYNAMIC SEASONAL RECOMMENDATIONS BANNER -->
+    <section style="padding: 24px 0; background: #ffffff; border-bottom: 1px solid #eef2ec;">
+      <div class="container" id="seasonalRecommendationBanner">
+        <!-- Rendered dynamically via js/produce.js based on JavaScript Date -->
+      </div>
+    </section>
+
+    <!-- 25. SEARCH & 26. CATEGORY FILTERS -->
+    <section style="padding: 40px 0 70px;">
+      <div class="container">
+        <div style="background: #ffffff; border: 1px solid #e1dcce; border-radius: 16px; padding: 24px; box-shadow: 0 6px 20px rgba(0,0,0,0.02); margin-bottom: 36px;">
+          <div style="display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
+            <input
+              type="text"
+              id="produceSearch"
+              placeholder="Search produce by name, description, season or category..."
+              style="flex: 1; min-width: 260px; padding: 12px 18px; border: 1px solid #cdd7c8; border-radius: 10px; font-size: 14px; outline: none;"
+            />
+            <button type="button" id="produceSearchBtn" class="primary-btn" style="border-radius: 10px;">
+              Search Produce <span>⌕</span>
+            </button>
+          </div>
+
+          <!-- Category Buttons -->
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+            <span style="font-size: 12px; font-weight: 800; color: #6a7c6e; text-transform: uppercase; margin-right: 6px;">Category:</span>
+            <button type="button" class="produce-category-btn filter-btn active" data-filter="all">All</button>
+            <button type="button" class="produce-category-btn filter-btn" data-filter="Fruits">Fruits</button>
+            <button type="button" class="produce-category-btn filter-btn" data-filter="Vegetables">Vegetables</button>
+            <button type="button" class="produce-category-btn filter-btn" data-filter="Herbs">Herbs</button>
+            <button type="button" class="produce-category-btn filter-btn" data-filter="Dairy">Dairy</button>
+            <button type="button" class="produce-category-btn filter-btn" data-filter="Other">Other</button>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+          <h2 style="font-size: 24px; color: #173d2b; font-weight: 800; margin: 0;">Fresh Produce Catalogue</h2>
+          <span id="produceCount" style="background: #eef5eb; color: #2d6547; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">Loading...</span>
+        </div>
+
+        <!-- 27. PRODUCE CARDS GRID -->
+        <div class="produce-grid-catalogue" id="produceGrid">
+          <!-- Dynamically populated from produce.json -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="noProduceFound" style="display: none; text-align: center; padding: 60px 20px; background: #ffffff; border: 1px dashed #d5d1c5; border-radius: 16px; margin-top: 30px;">
+          <div style="font-size: 48px; margin-bottom: 12px;">🥗</div>
+          <h3 style="font-size: 22px; color: #173d2b; font-weight: 800; margin-bottom: 6px;">No Produce Found</h3>
+          <p style="color: #6a7c6f; font-size: 14px; margin-bottom: 20px;">No produce items matched your search or category filter.</p>
+          <button type="button" class="primary-btn" onclick="document.querySelector('.produce-category-btn[data-filter=\'all\']').click(); document.getElementById('produceSearch').value = '';">
+            Reset Filters
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="brand footer-logo">
+          <div class="brand-mark"><span>F</span></div>
+          <div class="brand-text">
+            <strong>FreshFind</strong>
+            <small>Fresh All Along</small>
+          </div>
+        </a>
+        <p>Helping communities discover local farmers markets and seasonal fresh produce.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="https://wa.me/" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#quick-find">Find Market</a>
+        <a href="markets.html">Market Directory</a>
+        <a href="produce.html">Produce Guide</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="produce.html">Seasonal Picks</a>
+        <a href="guide.html">User Guide</a>
+        <a href="#" class="open-login-btn">Account Login</a>
+      </div>
+
+      <div class="footer-column footer-note">
+        <h4>Project Info</h4>
+        <p>Frontend-only web application created for discovering local markets and produce.</p>
+        <small style="color: #8fa094;">No server or API key required.</small>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 FreshFind. Fresh All Along.</p>
+      <p>Built with care for local communities.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/engine.js"></script>
+  <script src="js/bookmarks.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/produce.js"></script>
+</body>
+</html>

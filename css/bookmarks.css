@@ -1,0 +1,469 @@
+.bookmarks-page {
+background: #f8fbf7;
+min-height: 100vh;
+}
+
+/* BREADCRUMB */
+
+.bookmark-breadcrumb {
+padding: 18px 0;
+background: #eef5ec;
+border-bottom: 1px solid #dce8da;
+}
+
+.bookmark-breadcrumb .container {
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 14px;
+}
+
+.bookmark-breadcrumb a {
+color: #39704c;
+text-decoration: none;
+}
+
+.bookmark-breadcrumb a:hover {
+color: #245536;
+}
+
+.bookmark-breadcrumb span:last-child {
+color: #718073;
+}
+
+/* HERO */
+
+.bookmark-hero {
+padding: 70px 0 65px;
+background: #f1f7ef;
+border-bottom: 1px solid #e1ebe0;
+}
+
+.bookmark-hero-content {
+max-width: 720px;
+}
+
+.bookmark-label {
+display: inline-block;
+margin-bottom: 14px;
+color: #4b7c58;
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 2px;
+}
+
+.bookmark-hero h1 {
+margin: 0 0 16px;
+color: #203b2a;
+font-size: 46px;
+line-height: 1.15;
+font-weight: 600;
+}
+
+.bookmark-hero p {
+margin: 0;
+max-width: 650px;
+color: #68766b;
+font-size: 17px;
+line-height: 1.8;
+}
+
+/* CONTENT */
+
+.bookmark-content {
+padding: 70px 0 90px;
+}
+
+.bookmark-section {
+margin-bottom: 70px;
+}
+
+.bookmark-section-heading {
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+gap: 20px;
+margin-bottom: 28px;
+}
+
+.section-small-title {
+display: block;
+margin-bottom: 8px;
+color: #5b8264;
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 1.8px;
+}
+
+.bookmark-section-heading h2 {
+margin: 0;
+color: #243b2c;
+font-size: 30px;
+font-weight: 600;
+}
+
+.saved-number {
+padding: 8px 14px;
+border: 1px solid #d6e4d4;
+border-radius: 30px;
+background: #ffffff;
+color: #5b7460;
+font-size: 13px;
+}
+
+/* SAVED MARKET GRID */
+
+.saved-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 24px;
+}
+
+.saved-market-card {
+overflow: hidden;
+border: 1px solid #dce8da;
+border-radius: 16px;
+background: #ffffff;
+box-shadow: 0 8px 25px rgba(38, 73, 48, 0.06);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.saved-market-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 14px 32px rgba(38, 73, 48, 0.11);
+}
+
+.saved-market-image {
+width: 100%;
+height: 190px;
+overflow: hidden;
+background: #e8efe6;
+}
+
+.saved-market-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.saved-market-info {
+padding: 22px;
+}
+
+.saved-market-info h3 {
+margin: 0 0 10px;
+color: #294331;
+font-size: 20px;
+font-weight: 600;
+}
+
+.saved-market-location {
+margin-bottom: 9px;
+color: #718073;
+font-size: 14px;
+}
+
+.saved-market-time {
+color: #5d7061;
+font-size: 13px;
+line-height: 1.6;
+}
+
+.saved-market-actions {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+margin-top: 18px;
+}
+
+.view-market-btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 9px 15px;
+border-radius: 8px;
+background: #356b48;
+color: #ffffff;
+text-decoration: none;
+font-size: 13px;
+transition: background 0.25s ease;
+}
+
+.view-market-btn:hover {
+background: #285638;
+}
+
+.remove-bookmark-btn {
+border: 0;
+background: transparent;
+color: #8a6969;
+cursor: pointer;
+font-size: 13px;
+}
+
+.remove-bookmark-btn:hover {
+color: #a33f3f;
+}
+
+/* SAVED PRODUCE */
+
+.saved-produce-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+}
+
+.saved-produce-card {
+position: relative;
+padding: 22px;
+border: 1px solid #dce8da;
+border-radius: 14px;
+background: #ffffff;
+box-shadow: 0 7px 22px rgba(38, 73, 48, 0.05);
+transition: transform 0.3s ease;
+}
+
+.saved-produce-card:hover {
+transform: translateY(-4px);
+}
+
+.saved-produce-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 58px;
+height: 58px;
+margin-bottom: 17px;
+border-radius: 50%;
+background: #edf5ea;
+font-size: 28px;
+}
+
+.saved-produce-card h3 {
+margin: 0 0 7px;
+color: #294331;
+font-size: 18px;
+font-weight: 600;
+}
+
+.saved-produce-season {
+margin-bottom: 13px;
+color: #708074;
+font-size: 13px;
+}
+
+.saved-produce-remove {
+border: 0;
+background: transparent;
+color: #8a6969;
+cursor: pointer;
+font-size: 13px;
+}
+
+.saved-produce-remove:hover {
+color: #a33f3f;
+}
+
+/* EMPTY STATE */
+
+.bookmark-empty {
+padding: 55px 25px;
+border: 1px dashed #cadbc8;
+border-radius: 16px;
+background: #ffffff;
+text-align: center;
+}
+
+.empty-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 62px;
+height: 62px;
+margin: 0 auto 18px;
+border-radius: 50%;
+background: #edf5ea;
+color: #679171;
+font-size: 30px;
+}
+
+.bookmark-empty h3 {
+margin: 0 0 9px;
+color: #294331;
+font-size: 21px;
+font-weight: 600;
+}
+
+.bookmark-empty p {
+max-width: 480px;
+margin: 0 auto 22px;
+color: #738076;
+font-size: 14px;
+line-height: 1.7;
+}
+
+.bookmark-action {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 11px 19px;
+border-radius: 8px;
+background: #356b48;
+color: #ffffff;
+text-decoration: none;
+font-size: 13px;
+}
+
+.bookmark-action:hover {
+background: #285638;
+}
+
+/* QUICK NOTE */
+
+.bookmark-notes {
+display: flex;
+align-items: center;
+gap: 22px;
+padding: 30px;
+border: 1px solid #d8e5d6;
+border-radius: 16px;
+background: #edf5ea;
+}
+
+.notes-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+width: 55px;
+height: 55px;
+border-radius: 50%;
+background: #ffffff;
+color: #4e7c59;
+font-size: 22px;
+}
+
+.notes-content {
+flex: 1;
+}
+
+.notes-content .section-small-title {
+margin-bottom: 5px;
+}
+
+.notes-content h2 {
+margin: 0 0 7px;
+color: #294331;
+font-size: 21px;
+font-weight: 600;
+}
+
+.notes-content p {
+margin: 0;
+color: #68766b;
+font-size: 14px;
+line-height: 1.6;
+}
+
+.notes-button {
+flex-shrink: 0;
+padding: 11px 18px;
+border: 1px solid #467255;
+border-radius: 8px;
+color: #356b48;
+text-decoration: none;
+font-size: 13px;
+background: #ffffff;
+}
+
+.notes-button:hover {
+background: #356b48;
+color: #ffffff;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+.saved-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.saved-produce-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bookmark-hero h1 {
+    font-size: 40px;
+}
+
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+.bookmark-hero {
+    padding: 50px 0;
+}
+
+.bookmark-hero h1 {
+    font-size: 34px;
+}
+
+.bookmark-hero p {
+    font-size: 15px;
+}
+
+.bookmark-content {
+    padding: 50px 0 65px;
+}
+
+.bookmark-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.bookmark-section-heading h2 {
+    font-size: 26px;
+}
+
+.saved-grid {
+    grid-template-columns: 1fr;
+}
+
+.saved-produce-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.bookmark-notes {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.notes-button {
+    width: 100%;
+    text-align: center;
+}
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 450px) {
+
+.bookmark-hero h1 {
+    font-size: 29px;
+}
+
+.saved-produce-grid {
+    grid-template-columns: 1fr;
+}
+
+.saved-market-image {
+    height: 170px;
+}
+
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "tomatoes",
+    "name": "Tomatoes",
+    "category": "Vegetables",
+    "season": "Summer",
+    "image": "🍅",
+    "shortDescription": "Vine-ripened, juicy local tomatoes packed with natural flavor and lycopene.",
+    "description": "Locally grown vine-ripened tomatoes, harvested at peak freshness. Perfect for vibrant summer salads, hearty sauces, and everyday cooking. Grown pesticide-free by regional growers.",
+    "nutrition": "High in Lycopene, Vitamin C, Potassium, and Vitamin K.",
+    "marketIds": ["1", "3", "5", "7", "9", "11"]
+  },
+  {
+    "id": "mangoes",
+    "name": "Mangoes",
+    "category": "Fruits",
+    "season": "Summer",
+    "image": "🥭",
+    "shortDescription": "Sweet, aromatic tropical mangoes naturally tree-ripened for maximum sweetness.",
+    "description": "Rich golden mangoes directly sourced from sun-drenched orchards. Known for their melt-in-the-mouth texture and rich honeyed aroma. Excellent for smoothies, desserts, or fresh eating.",
+    "nutrition": "Rich in Vitamin A, Vitamin C, Dietary Fiber, and Antioxidants.",
+    "marketIds": ["2", "4", "6", "8", "10", "12"]
+  },
+  {
+    "id": "apples",
+    "name": "Apples",
+    "category": "Fruits",
+    "season": "Autumn",
+    "image": "🍎",
+    "shortDescription": "Crisp and tart local orchard apples handpicked at optimal autumn harvest.",
+    "description": "Freshly picked crisp orchard apples with a delightful sweet-tart balance. Ideal for healthy snacking, seasonal baking, fresh cider, and autumn pies.",
+    "nutrition": "Packed with Pectin fiber, Vitamin C, and Polyphenols.",
+    "marketIds": ["1", "2", "5", "7", "8", "12"]
+  },
+  {
+    "id": "mint",
+    "name": "Fresh Mint",
+    "category": "Herbs",
+    "season": "Spring",
+    "image": "🌿",
+    "shortDescription": "Fragrant spearmint and peppermint harvested fresh on market morning.",
+    "description": "Vibrant and aromatic freshly harvested mint bunches. Brings invigorating freshness to cool beverages, herbal teas, dressings, chutneys, and Mediterranean bowls.",
+    "nutrition": "Rich in Menthol, Iron, Folate, and Digestive Enzymes.",
+    "marketIds": ["1", "3", "4", "7", "9", "11"]
+  },
+  {
+    "id": "cucumbers",
+    "name": "Cucumbers",
+    "category": "Vegetables",
+    "season": "Summer",
+    "image": "🥒",
+    "shortDescription": "Crisp, refreshing seedless cucumbers perfect for hydration and salads.",
+    "description": "Tender-skinned, crunchy farm cucumbers grown without chemical sprays. Exceptionally refreshing, crisp, and high in natural hydration for hot summer afternoons.",
+    "nutrition": "Contains 95% water, Silica, Vitamin K, and Potassium.",
+    "marketIds": ["2", "3", "6", "9", "10", "11"]
+  },
+  {
+    "id": "potatoes",
+    "name": "Potatoes",
+    "category": "Vegetables",
+    "season": "Autumn",
+    "image": "🥔",
+    "shortDescription": "Earthy, wholesome organic new potatoes great for roasting and mashing.",
+    "description": "Locally harvested unwashed new potatoes full of natural goodness. Versatile for golden roasts, velvety soups, stews, and fluffy homemade mash.",
+    "nutrition": "Great source of Potassium, Vitamin B6, Fiber, and Complex Carbs.",
+    "marketIds": ["1", "4", "6", "7", "9", "12"]
+  },
+  {
+    "id": "spinach",
+    "name": "Baby Spinach",
+    "category": "Vegetables",
+    "season": "Winter",
+    "image": "🥬",
+    "shortDescription": "Tender dark green spinach leaves harvested cold for peak sweetness.",
+    "description": "Nutrient-dense dark green winter spinach with soft tender leaves. Grown in cool climate conditions that heighten its natural mild sweetness. Wonderful raw or lightly steamed.",
+    "nutrition": "High in Iron, Lutein, Calcium, Vitamin A, and Folate.",
+    "marketIds": ["1", "4", "7", "9", "10", "11"]
+  },
+  {
+    "id": "oranges",
+    "name": "Sweet Oranges",
+    "category": "Fruits",
+    "season": "Winter",
+    "image": "🍊",
+    "shortDescription": "Sun-kissed citrus bursting with refreshing juice and bright acidity.",
+    "description": "Tree-ripened winter citrus brimming with sweet, invigorating juice. Hand-selected for deep color, thin peel, and optimal juiciness.",
+    "nutrition": "Powerhouse of Vitamin C, Thiamine, and Citrus Bioflavonoids.",
+    "marketIds": ["3", "5", "8", "10", "12"]
+  },
+  {
+    "id": "carrots",
+    "name": "Farm Carrots",
+    "category": "Vegetables",
+    "season": "Autumn",
+    "image": "🥕",
+    "shortDescription": "Crisp sweet heirloom carrots with fresh green tops intact.",
+    "description": "Sweet root carrots harvested with their leafy tops on. Exceptionally sweet and crunchy, whether enjoyed raw, roasted with honey, or juiced.",
+    "nutrition": "Exceptional Beta-carotene (Vitamin A), Biotin, and Fiber.",
+    "marketIds": ["2", "5", "6", "9", "11", "12"]
+  },
+  {
+    "id": "strawberries",
+    "name": "Strawberries",
+    "category": "Fruits",
+    "season": "Spring",
+    "image": "🍓",
+    "shortDescription": "Fragrant ruby-red spring strawberries picked ripe this morning.",
+    "description": "Deep red, intensely aromatic strawberries cultivated in local soil. Unlike supermarket strawberries, these are completely sweet right through to the core.",
+    "nutrition": "Rich in Ellagic Acid, Vitamin C, Manganese, and Folate.",
+    "marketIds": ["2", "6", "8", "10", "12"]
+  },
+  {
+    "id": "milk",
+    "name": "Farm Milk",
+    "category": "Dairy",
+    "season": "All Seasons",
+    "image": "🥛",
+    "shortDescription": "Whole fresh pasteurized milk from pasture-raised local cows.",
+    "description": "Creamy, minimally processed farm fresh milk bottled within hours of milking. Produced by grass-fed herds on ethical regional dairy farms.",
+    "nutrition": "Rich in Bioavailable Calcium, Vitamin D, Protein, and B12.",
+    "marketIds": ["4", "6", "8", "12"]
+  },
+  {
+    "id": "honey",
+    "name": "Raw Honey",
+    "category": "Other",
+    "season": "All Seasons",
+    "image": "🍯",
+    "shortDescription": "Pure unpasteurized wildflower honey from local community apiaries.",
+    "description": "Raw, unfiltered golden honey carrying the distinctive pollen signatures of local seasonal wildflowers. Rich in enzymes and soothing natural sweetness.",
+    "nutrition": "Natural Antioxidants, Pollen enzymes, and Antimicrobial benefits.",
+    "marketIds": ["2", "5", "7", "8", "10"]
+  }
+]

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | FreshFind — Fresh All Along</title>
+  <meta
+    name="description"
+    content="Learn about FreshFind's mission to connect communities with local farmers markets and seasonal fresh produce."
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <!-- =========================
+       TOP BAR & LIVE CLOCK
+  ========================== -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span class="top-bar-brand-tag">FreshFind — Fresh All Along</span>
+      <span id="liveClock" class="top-bar-clock">Current Time: Loading...</span>
+    </div>
+  </div>
+
+  <!-- =========================
+       GLOBAL NAVIGATION
+  ========================== -->
+  <header class="main-header">
+    <a href="index.html" class="brand">
+      <div class="brand-mark"><span>F</span></div>
+      <div class="brand-text">
+        <strong>FreshFind</strong>
+        <small>Fresh All Along</small>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#quick-find">Find a Market</a></li>
+      <li><a href="markets.html">Market Directory</a></li>
+      <li><a href="produce.html">Produce Guide</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li>
+        <a href="bookmarks.html">
+          Bookmarks <span id="bookmarkCount" class="badge">0</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="header-right">
+      <button class="nav-auth-btn open-login-btn">Login</button>
+      <button class="nav-auth-btn nav-signup-btn open-signup-btn">Signup</button>
+      <a href="markets.html" class="btn-find">Find Market</a>
+      <button class="mobile-hamburger" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-header">
+      <div class="brand">
+        <div class="brand-mark"><span>F</span></div>
+        <div class="brand-text"><strong>FreshFind</strong></div>
+      </div>
+      <button class="modal-close" id="closeMobileNav" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#quick-find">Find a Market</a></li>
+      <li><a href="markets.html">Market Directory</a></li>
+      <li><a href="produce.html">Produce Guide</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="bookmarks.html">Bookmarks <span class="badge bookmark-count-badge">0</span></a></li>
+      <li><button class="open-login-btn">Login</button></li>
+      <li><button class="open-signup-btn">Signup</button></li>
+    </ul>
+  </div>
+
+  <!-- Breadcrumb (Section 42) -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <strong>About Us</strong>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="about-hero" style="background: #eef3eb; padding: 50px 0; border-bottom: 1px solid #dce8da;">
+      <div class="container" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center;">
+        <div>
+          <span class="section-kicker">OUR PURPOSE & PHILOSOPHY</span>
+          <h1 style="font-size: 42px; color: #173d2b; font-weight: 800; margin: 8px 0 16px;">
+            Fresh food should be <span>easy to find.</span>
+          </h1>
+          <p style="color: #556b5d; font-size: 16px; line-height: 1.6; margin-bottom: 24px;">
+            FreshFind is a dedicated digital discovery platform designed to help people discover local farmers markets, explore seasonal produce, and find wholesome farm options right in their neighborhoods.
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="markets.html" class="primary-btn">Explore Directory →</a>
+            <a href="produce.html" class="primary-btn-outline">Produce Guide →</a>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border-radius: 20px; border: 1px solid #d5decb; padding: 28px; box-shadow: 0 10px 25px rgba(0,0,0,0.03); text-align: center;">
+          <div style="font-size: 48px; margin-bottom: 8px;">🌱</div>
+          <h3 style="font-size: 20px; color: #173d2b; font-weight: 800; margin-bottom: 8px;">Fresh All Along</h3>
+          <p style="color: #6a7c6f; font-size: 13px; margin: 0;">Empowering local growers, healthy families, and sustainable food chains.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: OUR MISSION -->
+    <section style="padding: 60px 0; background: #ffffff;">
+      <div class="container" style="max-width: 860px;">
+        <span class="section-kicker">OUR MISSION</span>
+        <h2 style="font-size: 32px; color: #173d2b; font-weight: 800; margin-bottom: 16px;">
+          Making Local Farmers Markets Effortless to Discover
+        </h2>
+        <p style="color: #556b5d; font-size: 16px; line-height: 1.7; margin-bottom: 20px;">
+          Instead of sifting through fragmented social posts, outdated bulletin boards, or unverified word-of-mouth tips, FreshFind brings verified schedules, real coordinates, and produce associations together into one seamless web experience.
+        </p>
+        <p style="color: #556b5d; font-size: 16px; line-height: 1.7;">
+          Our goal is to make local food shopping as modern and convenient as any mainstream supermarket, while keeping money and community vitality right where it belongs: with our local farming families.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: HOW PLATFORM WORKS (PIPELINE) -->
+    <section style="padding: 60px 0; background: #f7faf5; border-top: 1px solid #e2ebd9; border-bottom: 1px solid #e2ebd9;">
+      <div class="container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 40px;">
+          <span class="section-kicker">ARCHITECTURE & UX WORKFLOW</span>
+          <h2 style="font-size: 32px; color: #173d2b; font-weight: 800; margin-bottom: 8px;">How the Platform Works</h2>
+          <p style="color: #556b5d; font-size: 15px;">Follow the complete 6-stage visitor journey from inquiry to in-person visit.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; text-align: center;">
+          <div style="background: #ffffff; padding: 24px 16px; border-radius: 14px; border: 1px solid #dbe6d5;">
+            <div style="font-size: 28px; margin-bottom: 8px;">⌕</div>
+            <strong style="display: block; font-size: 16px; color: #173d2b; margin-bottom: 4px;">1. Discover</strong>
+            <small style="color: #6a7c6f; font-size: 12px;">Discover nearby markets across all city districts.</small>
+          </div>
+
+          <div style="background: #ffffff; padding: 24px 16px; border-radius: 14px; border: 1px solid #dbe6d5;">
+            <div style="font-size: 28px; margin-bottom: 8px;">⌨</div>
+            <strong style="display: block; font-size: 16px; color: #173d2b; margin-bottom: 4px;">2. Search</strong>
+            <small style="color: #6a7c6f; font-size: 12px;">Query by name, produce type, neighborhood or keywords.</small>
+          </div>
+
+          <div style="background: #ffffff; padding: 24px 16px; border-radius: 14px; border: 1px solid #dbe6d5;">
+            <div style="font-size: 28px; margin-bottom: 8px;">⚙</div>
+            <strong style="display: block; font-size: 16px; color: #173d2b; margin-bottom: 4px;">3. Filter</strong>
+            <small style="color: #6a7c6f; font-size: 12px;">Refine by operating day, area, or specific crops.</small>
+          </div>
+
+          <div style="background: #ffffff; padding: 24px 16px; border-radius: 14px; border: 1px solid #dbe6d5;">
+            <div style="font-size: 28px; margin-bottom: 8px;">◉</div>
+            <strong style="display: block; font-size: 16px; color: #173d2b; margin-bottom: 4px;">4. Explore</strong>
+            <small style="color: #6a7c6f; font-size: 12px;">Check weekly operating tables, today's status, and map location.</small>
+          </div>
+
+          <div style="background: #ffffff; padding: 24px 16px; border-radius: 14px; border: 1px solid #dbe6d5;">
+            <div style="font-size: 28px; margin-bottom: 8px;">♡</div>
+            <strong style="display: block; font-size: 16px; color: #173d2b; margin-bottom: 4px;">5. Save</strong>
+            <small style="color: #6a7c6f; font-size: 12px;">Bookmark picks with session notes and export to file.</small>
+          </div>
+
+          <div style="background: #ffffff; padding: 24px 16px; border-radius: 14px; border: 1px solid #dbe6d5;">
+            <div style="font-size: 28px; margin-bottom: 8px;">📍</div>
+            <strong style="display: block; font-size: 16px; color: #173d2b; margin-bottom: 4px;">6. Visit</strong>
+            <small style="color: #6a7c6f; font-size: 12px;">Navigate directly using geolocation and map markers.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: PROJECT INFORMATION -->
+    <section style="padding: 60px 0; background: #ffffff;">
+      <div class="container">
+        <span class="section-kicker">PROJECT SPECIFICATION</span>
+        <h2 style="font-size: 30px; color: #173d2b; font-weight: 800; margin-bottom: 24px;">Project Information</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+          <div style="background: #fbfaf6; border: 1px solid #e1dcce; border-radius: 14px; padding: 22px;">
+            <small style="color: #7b8f80; font-size: 11px; text-transform: uppercase; font-weight: 800;">Project Name</small>
+            <h4 style="font-size: 18px; color: #173d2b; margin: 4px 0 6px;">FreshFind</h4>
+            <p style="font-size: 13px; color: #556b5d; margin: 0;">Tagline: "Fresh All Along" • Web Platform</p>
+          </div>
+
+          <div style="background: #fbfaf6; border: 1px solid #e1dcce; border-radius: 14px; padding: 22px;">
+            <small style="color: #7b8f80; font-size: 11px; text-transform: uppercase; font-weight: 800;">Theme</small>
+            <h4 style="font-size: 18px; color: #173d2b; margin: 4px 0 6px;">Farmers Market & Produce Discovery</h4>
+            <p style="font-size: 13px; color: #556b5d; margin: 0;">Encouraging seasonal eating, local community markets, and transparent food systems.</p>
+          </div>
+
+          <div style="background: #fbfaf6; border: 1px solid #e1dcce; border-radius: 14px; padding: 22px;">
+            <small style="color: #7b8f80; font-size: 11px; text-transform: uppercase; font-weight: 800;">Technology</small>
+            <h4 style="font-size: 18px; color: #173d2b; margin: 4px 0 6px;">Frontend Core Architecture</h4>
+            <p style="font-size: 13px; color: #556b5d; margin: 0;">HTML5 Semantic Elements, Vanilla CSS with custom tokens, Modular JavaScript (ES6+), Local JSON Datasets.</p>
+          </div>
+
+          <div style="background: #fbfaf6; border: 1px solid #e1dcce; border-radius: 14px; padding: 22px;">
+            <small style="color: #7b8f80; font-size: 11px; text-transform: uppercase; font-weight: 800;">Purpose</small>
+            <h4 style="font-size: 18px; color: #173d2b; margin: 4px 0 6px;">Civic Wellness & Local Empowerment</h4>
+            <p style="font-size: 13px; color: #556b5d; margin: 0;">Bridge the gap between regional agricultural producers and urban conscious consumers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: TEAM -->
+    <section style="padding: 60px 0 80px; background: #f8faf6; border-top: 1px solid #e2ebd9;">
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto 36px;">
+          <span class="section-kicker">PASSIONATE STEWARDS</span>
+          <h2 style="font-size: 32px; color: #173d2b; font-weight: 800; margin-bottom: 8px;">The FreshFind Team</h2>
+          <p style="color: #556b5d; font-size: 15px;">Meet the dedicated community members behind the FreshFind discovery initiative.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+          <div style="background: #ffffff; border: 1px solid #dbe6d5; border-radius: 16px; padding: 24px; text-align: center;">
+            <div style="font-size: 40px; margin-bottom: 12px; background: #eef5eb; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">👩‍🌾</div>
+            <h4 style="font-size: 18px; color: #173d2b; margin: 0 0 4px;">Amina Raza</h4>
+            <small style="color: #2d6547; font-weight: 700; display: block; margin-bottom: 8px;">Project Lead & Research</small>
+            <p style="font-size: 12px; color: #6a7c6f; line-height: 1.5; margin: 0;">Agricultural advocate focusing on smallholder connections and community market logistics.</p>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid #dbe6d5; border-radius: 16px; padding: 24px; text-align: center;">
+            <div style="font-size: 40px; margin-bottom: 12px; background: #eef5eb; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">👨‍💻</div>
+            <h4 style="font-size: 18px; color: #173d2b; margin: 0 0 4px;">Bilal Tariq</h4>
+            <small style="color: #2d6547; font-weight: 700; display: block; margin-bottom: 8px;">Frontend Architecture</small>
+            <p style="font-size: 12px; color: #6a7c6f; line-height: 1.5; margin: 0;">Specializing in accessible responsive design, interactive maps, and client-side logic.</p>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid #dbe6d5; border-radius: 16px; padding: 24px; text-align: center;">
+            <div style="font-size: 40px; margin-bottom: 12px; background: #eef5eb; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">🍎</div>
+            <h4 style="font-size: 18px; color: #173d2b; margin: 0 0 4px;">Zainab Sheikh</h4>
+            <small style="color: #2d6547; font-weight: 700; display: block; margin-bottom: 8px;">Produce & Seasonal Content</small>
+            <p style="font-size: 12px; color: #6a7c6f; line-height: 1.5; margin: 0;">Nutritionist and food writer curating produce guidance and seasonal peak charts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="brand footer-logo">
+          <div class="brand-mark"><span>F</span></div>
+          <div class="brand-text">
+            <strong>FreshFind</strong>
+            <small>Fresh All Along</small>
+          </div>
+        </a>
+        <p>Helping communities discover local farmers markets and seasonal fresh produce.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="https://wa.me/" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#quick-find">Find Market</a>
+        <a href="markets.html">Market Directory</a>
+        <a href="produce.html">Produce Guide</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="produce.html">Seasonal Picks</a>
+        <a href="guide.html">User Guide</a>
+        <a href="#" class="open-login-btn">Account Login</a>
+      </div>
+
+      <div class="footer-column footer-note">
+        <h4>Project Info</h4>
+        <p>Frontend-only web application created for discovering local markets and produce.</p>
+        <small style="color: #8fa094;">No server or API key required.</small>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 FreshFind. Fresh All Along.</p>
+      <p>Built with care for local communities.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/engine.js"></script>
+  <script src="js/bookmarks.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
